@@ -153,7 +153,6 @@ module.exports = {
     //
     // However, note that supported options are explicitly whitelisted below.
     var _mysqlClientConfig = {};
-    console.log('metaphor', inputs.meta);
 
     // Validate and parse `meta` (if specified).
     if (!_.isUndefined(inputs.meta)) {
@@ -195,10 +194,6 @@ module.exports = {
     if (_mysqlClientConfig.socketPath && _mysqlClientConfig.socketPath == null) {
       delete _mysqlClientConfig['socketPath'];
     }
-
-    console.log(_mysqlClientConfig);
-
-    console.log(_mysqlClientConfig);
     var pool = felix.createPool(_mysqlClientConfig);
 
     // Bind an "error" handler in order to handle errors from connections in the pool,
