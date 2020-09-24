@@ -31,5 +31,18 @@ default: {
   },
 ```
 
+5 - Your app.yaml should look like this:
+
+```yaml
+runtime: nodejs
+env: flex
+service: sails-app
+beta_settings:
+  # The connection name of your instance, available by using
+  # 'gcloud beta sql instances describe [INSTANCE_NAME]' or from
+  # the Instance details page in the Google Cloud Platform Console.
+  cloud_sql_instances: YOUR_INSTANCE_CONNECTION_NAME
+```
+
 > You are good to go
 
