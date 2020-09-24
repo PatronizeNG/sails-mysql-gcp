@@ -25,9 +25,9 @@ $ npm install sails-mysql
 default: {
     adapter: "sails-mysql-gcp",
     socketPath: "/cloudsql/<CLOUD_SQL_CONNECTION_NAME>",
-    user: "root",
-    password: "password",
-    database: "patronize-auth",
+    user: "<USER>",
+    password: "<PASSWORD>",
+    database: "<DATABASE_NAME>",
   },
 ```
 
