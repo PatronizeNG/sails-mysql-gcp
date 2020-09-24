@@ -192,6 +192,10 @@ module.exports = {
       delete _mysqlClientConfig['port'];
     }
 
+    if (_mysqlClientConfig.socketPath && _mysqlClientConfig.socketPath == null) {
+      delete _mysqlClientConfig['socketPath'];
+    }
+
     console.log(_mysqlClientConfig);
 
     console.log(_mysqlClientConfig);
